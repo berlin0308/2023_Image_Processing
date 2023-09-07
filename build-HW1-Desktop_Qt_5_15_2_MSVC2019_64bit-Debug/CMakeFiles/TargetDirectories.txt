@@ -1,0 +1,8 @@
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/HW1.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/list_install_components.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/install.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/install/local.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/HW1_autogen_timestamp_deps.dir
+C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/CMakeFiles/HW1_autogen.dir

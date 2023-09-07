@@ -1,0 +1,9 @@
+# ninja log v5
+3	396	7157801100868069	HW1_autogen/timestamp	70ed6bb28e7f597d
+3	396	7157801100868069	HW1_autogen/mocs_compilation.cpp	70ed6bb28e7f597d
+3	396	7157801100868069	C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/HW1_autogen/timestamp	70ed6bb28e7f597d
+3	396	7157801100868069	C:/Users/ASUS/Desktop/Image_Processing/2023_Image_Processing/build-HW1-Desktop_Qt_5_15_2_MSVC2019_64bit-Debug/HW1_autogen/mocs_compilation.cpp	70ed6bb28e7f597d
+397	1431	7157801112207819	CMakeFiles/HW1.dir/HW1_autogen/mocs_compilation.cpp.obj	b9c55831b7141b91
+411	1583	7157801113761547	CMakeFiles/HW1.dir/mainwindow.cpp.obj	bab55f7aca1cb1d7
+405	1937	7157801117324942	CMakeFiles/HW1.dir/main.cpp.obj	9a2754cafe0496d9
+1937	2339	7157801121232634	HW1.exe	cf7d7043fc80ee18
