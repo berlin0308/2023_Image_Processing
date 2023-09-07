@@ -20,6 +20,16 @@ private slots:
 
     void on_upload_2_clicked();
 
+    void on_horizontalSlider_add_sub_valueChanged(int value);
+
+    void on_horizontalSlider_multiply_valueChanged(int value);
+
+    void on_pushButton_g_func_clicked();
+
+    void on_pushButton_avg_clicked();
+
+    void generate_histogram(int image[64][64]);
+
 private:
     Ui::MainWindow *ui;
 };
