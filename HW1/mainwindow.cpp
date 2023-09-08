@@ -8,14 +8,15 @@
 #include <QString>
 #include <math.h>
 #include <QtWidgets/QApplication>
-//#include <QtCharts/QBarSet>
-//#include <QtCharts/QBarSeries>
-//#include <QtCharts/QChart>
-//#include <QtCharts/QChartView>
-//#include <QtWidgets/QMainWindow>
-//#include <QtWidgets/QHBoxLayout>
+#include <QtCharts/QBarSet>
+#include <QtCharts/QBarSeries>
+#include <QChart>
+#include <QtCharts/QChartView>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QHBoxLayout>
 using namespace std;
 
+//QT_CHARTS_USE_NAMESPACE
 
 int image[64][64]; // the first image
 int image_processed[64][64]; // processed first image
@@ -44,7 +45,7 @@ void MainWindow::on_upload_1_clicked()
     // Open file dialog to get the file name
     QString fileName = QFileDialog::getOpenFileName(this,
                                                     tr("Open Image"), ".",
-                                                   tr("Image Files (*.64)"));
+                                                    tr("Image Files (*.64)"));
 
     // Read the .64 text file and convert the characters into image array
     if(fileName != NULL)
@@ -176,7 +177,7 @@ void MainWindow::on_upload_2_clicked()
 
     image_primacy = "second";
     ui->pushButton_avg->setEnabled(true);
-
+    generate_histogram(image_second);
 }
 
 
@@ -209,6 +210,7 @@ void MainWindow::on_horizontalSlider_add_sub_valueChanged(int value)
     view.show();
 
     image_primacy = "first";
+    generate_histogram(image_processed);
 }
 
 
@@ -241,6 +243,7 @@ void MainWindow::on_horizontalSlider_multiply_valueChanged(int value)
     view.show();
 
     image_primacy = "first";
+    generate_histogram(image_processed);
 }
 
 
@@ -274,6 +277,7 @@ void MainWindow::on_pushButton_g_func_clicked()
     view.show();
 
     image_primacy = "first";
+    generate_histogram(image_g);
 }
 
 
@@ -306,6 +310,7 @@ void MainWindow::on_pushButton_avg_clicked()
     view.show();
 
     image_primacy = "avg";
+    generate_histogram(image_avg);
 }
 
 void MainWindow::generate_histogram(int image[64][64]){
@@ -317,7 +322,7 @@ void MainWindow::generate_histogram(int image[64][64]){
     {
         for(int j=0;j<64;j++)
         {
-//            cout <<image[i][j]<<" ";
+            //            cout <<image[i][j]<<" ";
             occurrence[image[i][j]]++;
         }
     }
@@ -326,31 +331,30 @@ void MainWindow::generate_histogram(int image[64][64]){
         std::cout << element << " ";
     }
 
-//    QBarSet *set0 = new QBarSet("Histogram");
+    QBarSet *set0 = new QBarSet("Histogram");
 
-//    for(i=0;i<32;i++)
-//        *set0 << histogram[i];
+    for(int i=0;i<32;i++)
+        *set0 << occurrence[i];
 
-//    QBarSeries *series = new QBarSeries();
-//    series->append(set0);
+    QBarSeries *series = new QBarSeries();
+    series->append(set0);
 
-//    QChart *chart = new QChart();
-//    chart->addSeries(series);
+    QChart *chart = new QChart();
+    chart->addSeries(series);
 //    chart->setTitle("Histogram");
-//    chart->setAnimationOptions(QChart::SeriesAnimations);
-//    chart->legend()->setVisible(false);
-//    chart->legend()->setAlignment(Qt::AlignBottom);
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+    chart->legend()->setVisible(false);
+    chart->legend()->setAlignment(Qt::AlignBottom);
 
-//    QChartView *chartView = new QChartView(chart);
-//    chartView->setRenderHint(QPainter::Antialiasing);
+    QChartView *chartView = new QChartView(chart);
+    chartView->setRenderHint(QPainter::Antialiasing);
 
-//    while(!ui->horizontalLayout->isEmpty())
-//    {
-//        // Clear the horizontal layout content if there is any
-//        ui->horizontalLayout->removeItem(ui->horizontalLayout->itemAt(0));
-//    }
-//    ui->horizontalLayout->addWidget(chartView);
-
+    while(!ui->horizontalLayout_hist->isEmpty())
+    {
+        // Clear the horizontal layout content if there is any
+        ui->horizontalLayout_hist->removeItem(ui->horizontalLayout_hist->itemAt(0));
+    }
+    ui->horizontalLayout_hist->addWidget(chartView);
 
 
 }
